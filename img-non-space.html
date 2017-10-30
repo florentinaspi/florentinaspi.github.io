@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>img no space</title>
+  
+  <style>
+  body { 
+  	background-color:#333; 
+  	color:#eee;
+  	margin: auto;
+    width: 99%;
+  }
+    .nospace{
+    	width:100%;
+    }
+  	.nospace img{
+  		float:left;
+  		padding:0;
+  		
+  		/*margin:0;*/
+		/*line-height:0;*/
+  	}
+ 
+	/* Smartphones (portrait and landscape) ----------- */
+	@media screen 
+	and (min-device-width : 320px) 
+	and (max-device-width : 480px) {
+	/* Styles */
+	 img {width:300px;}
+	}
+	
+	/* iPads (portrait and landscape) ----------- */
+	@media  screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) {
+	/* Styles */
+	 img {width:250px;}
+	}
+	
+	/* Desktops and laptops ----------- */
+	@media  screen 
+	and (min-width : 1224px) {
+	/* Styles */
+	 img {width:400px;}
+	}
+	
+	/* Large screens ----------- */
+	@media  screen 
+	and (min-width : 1824px) {
+	/* Styles */
+	img {width:600px;}
+	}
+
+  	 
+  	 
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$(img).each(function(){
+		 var h = this.height();
+		 var w = this.width();
+			if (w => h){
+			  this.attr('width', w*0.66);
+			}
+			else {
+			  this.attr('height',h*0.66);
+			}
+		});
+		
+	});
+	</script>	
+</head>
+
+<body>
+
+	<div class="nospace">
+		<img src="img1.jpg" />
+		<img src="img2.jpg" />
+		<img src="img2.jpg" />
+		<img src="img5.jpg" />
+  		<img src="img1.jpg" />
+		<img src="img5.jpg" />
+		
+		<img src="img4.jpg" />
+		<img src="img6.jpg" />
+		<img src="img3.jpg" />
+		<img src="img6.jpg" />
+		<img src="img4.jpg" />
+		<img src="img6.jpg" />
+		<img src="img5.jpg" />
+		<img src="img1.jpg"/>
+		<img src="img2.jpg"/>
+	</div>
+
+</body>
+
+</html>
