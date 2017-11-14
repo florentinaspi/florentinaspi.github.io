@@ -49,9 +49,12 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "foundation/components/grid",
+        "foundation/components/visibility",
+        "foundation/components/block-grid"
 ;
-@import "foundation/components/";
+//@import "foundation/components/grid";
 //@import "foundation/grid";
 //@import "foundation/block-grid";
 //@import "foundation/visibility";
